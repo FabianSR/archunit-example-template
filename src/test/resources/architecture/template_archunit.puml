@@ -1,0 +1,14 @@
+@startuml
+
+[Adapter controllers] <<org.tms.adapters.rest..>>
+[Adapter persistence] <<org.tms.adapters.persistence..>>
+
+[Application] <<org.tms.application..>>
+[Domain] <<org.tms.domain..>>
+
+'dependencies
+[Application] --> [Domain]
+[Adapter persistence] --> [Application]
+[Adapter controllers] --> [Application]
+
+@enduml
